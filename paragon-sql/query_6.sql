@@ -5,4 +5,4 @@ SELECT jc.category_name AS job_category,
 	WHERE jc.categoryid = jlc.categoryid AND jlc.jobid = ja.jobid
 	GROUP BY jc.categoryid
 	ORDER BY cast(count(DISTINCT jlc.jobid) AS FLOAT) / cast(count(ja.applicationid) AS FLOAT) DESC
-	LIMIT 5
+	LIMIT 5;
